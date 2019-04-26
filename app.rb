@@ -34,9 +34,7 @@ class App < Sinatra::Base
   else params[:operation]  == divide
     @difference = params[:number1] / params[:number2]
     "#{@quotient}"
-  
-    
+    end 
   end 
-
-
+  
 end
