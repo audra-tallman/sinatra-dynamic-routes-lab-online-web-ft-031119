@@ -28,17 +28,17 @@ class App < Sinatra::Base
     n1 = params[:number1].to_i
     n2 = params[:number2].to_i
   if op == "add"
-    sum = n1 + n2
+    ans = n1 + n2
   elsif op  == "subtract"
-    @difference = params[:number1] - params[:number2]
-    "#{@difference}"
-  elsif params[:operation]  == multiply
-    @product = params[:number1] * params[:number2]
-    "#{@product}"
-  else params[:operation]  == divide
-    @difference = params[:number1] / params[:number2]
-    "#{@quotient}"
-    end 
+    ans = n1 - n2
+  elsif op  == "multiply"
+    ans = n1 * n2
+  elsif op  == "divide"
+    ans = n1 / n2
+  else 
+    ans =  "No can do"
+  end 
+  ans.to_s
   end 
   
 end
